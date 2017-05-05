@@ -10,44 +10,38 @@ namespace ExercicioRevisao
     {
         static void Main(string[] args)
         {
-            int veic; 
-            int i;
-            string modelo;
-            double km, pot;
+            int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("informe o número de veículos");
-            veic = int.Parse(Console.ReadLine());
-
-            for (i = 0; i > veic; i++)
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("Informe o modelo");
-                modelo = Console.ReadLine();
+                string nome = Console.ReadLine(); //Palio
+                double quilometragem = double.Parse(Console.ReadLine()); //20000
+                int potencia = int.Parse(Console.ReadLine()); // 300
 
-                Console.WriteLine("Informe a quilometragem");
-                km = double.Parse(Console.ReadLine());
-
-                Console.WriteLine("Informe a potencia");
-                pot = double.Parse(Console.ReadLine());
-
-                string classifRodagem, classifPot;
-
-                if (km <= 5000)
-                    classifRodagem = "novo";
-                else if (km <= 30000)
-                    classifRodagem = "semi novo";
-                else
-                    classifRodagem = "velho";
-
-                if (pot > 200)
-                    classifPot = "potente";
-                else if (pot < 200 && pot > 120)
-                    classifPot = "forte";
-                else
-                    classifPot = "popular";
-
+                Console.WriteLine(Classificar(nome, quilometragem, potencia));
+                                          //"Palio"    20000          300 
             }
-                Console.WriteLine("{0} - {1} - {2}", modelo, classifRodagem, classifPot);
-                Console.ReadKey();
+        }
+
+        public static string Classificar(string mod, double km, int pot)
+        {                               // "Palio"    20000       300
+            string classifRodagem, classifPot;
+
+            if (km <= 5000)
+                classifRodagem = "Novo";
+            else if (km <= 30000)
+                classifRodagem = "Seminovo";
+            else
+                classifRodagem = "Velho";
+
+            if (pot < 120)
+                classifPot = "Popular";
+            else if (pot <= 200)
+                classifPot = "Forte";
+            else
+                classifPot = "Potente";
+
+            return String.Format("{0} - {1} - {2}", mod, classifRodagem, classifPot);
         }
     }
 }
