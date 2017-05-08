@@ -18,19 +18,19 @@ namespace ConsoleApplication1
 
             for (i = 0; i < numero; i++)
             {
-                    Console.WriteLine("Informe o nome do carro");
-                    nome = Console.ReadLine();
+                Console.WriteLine("Informe o nome do carro");
+                nome = Console.ReadLine();
 
-	            Console.WriteLine("Informe a quilometragem do carro");
-                    km = double.Parse(Console.ReadLine());
-       
-	            Console.WriteLine("Informe a potencia do carro");
-	            pot = int.Parse(Console.ReadLine());
+                Console.WriteLine("Informe a quilometragem do carro");
+                km = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine(Classificar(nome, km, pot));
-              
+                Console.WriteLine("Informe a potencia do carro");
+                pot = int.Parse(Console.ReadLine());
+
+                Console.WriteLine(Classificar(nome, km, pot));
+
             }
-        } //static void main
+        }
 
         public static string Classificar(string modelo, double km, int pot)
         {
