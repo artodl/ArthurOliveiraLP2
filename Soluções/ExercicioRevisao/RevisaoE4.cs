@@ -36,7 +36,7 @@ namespace ConsoleApplication1
                 Console.WriteLine(Classificar(veiculo.nome, veiculo.km, veiculo.pot));
 
             }
-        } //static void main
+        } 
 
         public static string Classificar(string modelo, double km, int potencia)
         {
