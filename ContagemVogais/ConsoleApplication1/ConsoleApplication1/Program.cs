@@ -12,9 +12,7 @@ namespace ConsoleApplication1
         {
             string s;
             char posição;
-            int i, vogal;
-
-            vogal = 0;
+            int i, vogal = 0;
 
             Console.WriteLine("digita ai");
             s = Console.ReadLine();
