@@ -7,32 +7,38 @@ namespace ConsoleApplication1
 {
     class Program
     {
+        struct carro
+        {
+            public int pot;
+            public int numero;
+            public string nome;
+            public double km;
+        }
         static void Main(string[] args)
         {
-            int i, numero, pot;
-            string nome;
-            double km;
+            carro veiculo;
+            int i;
 
-            Console.WriteLine("Informe o número de carros");
-            numero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Informe a quantidade de carros");
+            veiculo.numero = Convert.ToInt32(Console.ReadLine());
 
-            for (i = 0; i < numero; i++)
+            for (i = 0; i < veiculo.numero; i++)
             {
                 Console.WriteLine("Informe o nome do carro");
-                nome = Console.ReadLine();
+                veiculo.nome = Console.ReadLine();
 
                 Console.WriteLine("Informe a quilometragem do carro");
-                km = double.Parse(Console.ReadLine());
+                veiculo.km = double.Parse(Console.ReadLine());
 
                 Console.WriteLine("Informe a potencia do carro");
-                pot = int.Parse(Console.ReadLine());
+                veiculo.pot = int.Parse(Console.ReadLine());
 
-                Console.WriteLine(Classificar(nome, km, pot));
+                Console.WriteLine(Classificar(veiculo.nome, veiculo.km, veiculo.pot));
 
             }
         }
 
-        public static string Classificar(string modelo, double km, int pot)
+        public static string Classificar(string modelo, double km, int potencia)
         {
             string T, P;
 
@@ -45,16 +51,18 @@ namespace ConsoleApplication1
             else
                 T = "velho";
 
-            if (pot < 120)
+            if (potencia < 120)
                 P = "popular";
 
-            else if (pot <= 200)
+            else if (potencia <= 200)
                 P = "forte";
 
             else
                 P = "potente";
 
             return String.Format("{0} - {1} - {2}", modelo, T, P);
+
         }
+
     }
 }
