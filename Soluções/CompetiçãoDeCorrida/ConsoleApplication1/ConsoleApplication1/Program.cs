@@ -17,7 +17,7 @@ namespace ConsoleApplication1
             Console.WriteLine("informe o numero de competidores");
             n = int.Parse(Console.ReadLine());
 
-            Competidor[] competidores = new Competidor;
+            Competidor[] competidores = new Competidor[n];
 
             for(i=0; i <= n; i++)
             {
@@ -36,6 +36,7 @@ namespace ConsoleApplication1
 
                 competidores[i] = corredor;
             }
+
 
         }
     }
