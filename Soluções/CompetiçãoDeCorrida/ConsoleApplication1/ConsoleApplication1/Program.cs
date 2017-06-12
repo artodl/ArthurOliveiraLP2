@@ -17,10 +17,11 @@ namespace ConsoleApplication1
             Console.WriteLine("informe o numero de competidores");
             n = int.Parse(Console.ReadLine());
 
-            Competidor[] corredor = new Competidor[i];
+            Competidor[] competidores = new Competidor;
 
             for(i=0; i <= n; i++)
             {
+                Competidor corredor = new Competidor();
                 Console.WriteLine("informe o nome");
                 nome = Console.ReadLine();
 
@@ -32,6 +33,8 @@ namespace ConsoleApplication1
 
                 Console.WriteLine("informe o t3");
                 t3 = int.Parse(Console.ReadLine());
+
+                competidores[i] = corredor;
             }
 
         }

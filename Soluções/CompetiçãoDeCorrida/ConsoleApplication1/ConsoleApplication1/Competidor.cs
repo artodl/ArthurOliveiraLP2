@@ -14,7 +14,7 @@ namespace ConsoleApplication1
         {
             if(t1 > t2 && t1 > t3)
             {
-                return t2 + t3;
+                return t1 + t2;
             }
             else if (t2 > t1 && t2 > t3)
             {
