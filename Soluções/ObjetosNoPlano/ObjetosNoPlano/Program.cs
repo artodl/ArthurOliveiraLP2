@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ObjetosNoPlano
+namespace ObjetoNoPlano
 {
     class Program
     {
@@ -18,23 +17,37 @@ namespace ObjetosNoPlano
             Console.Write("Digite Y inicial: ");
             int y = int.Parse(Console.ReadLine());
 
-            /* O tipo Objeto2D não existirá até que você crie uma nova 
-             * classe para representá-lo em seu projeto!*/
             Objeto2D obj = new Objeto2D();
-            /* COMPLETAR: Inicialização da posição do objeto */
+            obj.x = x;
+            obj.y = y;
 
             Console.Write("Digite comando: ");
-            ConsoleKey comando = Console.ReadKey().Key;
-
-            if (comando == ConsoleKey.RightArrow)
+            ConsoleKey direcao = Console.ReadKey().Key;
+            while (direcao != ConsoleKey.Escape)
             {
-                /* As duas linhas abaixo só funcionarão corretamente caso a 
-                 * classe Objeto2D tenha sido construida de forma adequada, 
-                 * ou seja, que saiba realizar as tarefas de andar para a direita 
-                 * e de retornar uma string exibindo suas coordenadas */
+                if (direcao == ConsoleKey.RightArrow)
+                {
+                    obj.AndarParaDireita();
+                    Console.WriteLine(obj.Coordenadas());
+                }
+                if (direcao == ConsoleKey.LeftArrow)
+                {
+                    obj.AndarParaEsquerda();
+                    Console.WriteLine(obj.Coordenadas());
+                }
+                if (direcao == ConsoleKey.UpArrow)
+                {
+                    obj.AndarParaCima();
+                    Console.WriteLine(obj.Coordenadas());
+                }
+                if (direcao == ConsoleKey.DownArrow)
+                {
+                    obj.AndarParaBaixo();
+                    Console.WriteLine(obj.Coordenadas());
+                }
 
-                obj.AndarParaADireita();
-                Console.WriteLine(obj.Coordenadas());
+                Console.Write("Digite comando: ");
+                direcao = Console.ReadKey().Key;
             }
         }
     }
