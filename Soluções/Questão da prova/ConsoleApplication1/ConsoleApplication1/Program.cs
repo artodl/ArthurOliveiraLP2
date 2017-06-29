@@ -11,7 +11,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             int A, B, C, D, E, n, bemMarcado = 0, ambiguo = 0;
-            string resp;
+            string resp = "";
             n = int.Parse(Console.ReadLine());
 
             for (int i = 0; i <= n; i++)
@@ -26,7 +26,6 @@ namespace ConsoleApplication1
                 {
                     resp = "A";
                     bemMarcado++;
-                    Console.WriteLine(resp);
                 }
                 else if(A <= 155)
                 {
@@ -37,7 +36,6 @@ namespace ConsoleApplication1
                 {
                     resp = "B";
                     bemMarcado++;
-                    Console.WriteLine(resp);
                 }
                 else if (B <= 155)
                 {
@@ -48,7 +46,6 @@ namespace ConsoleApplication1
                 {
                     resp = "C";
                     bemMarcado++;
-                    Console.WriteLine(resp);
                 }
                 else if (C <= 155)
                 {
@@ -59,7 +56,6 @@ namespace ConsoleApplication1
                 {
                     resp = "D";
                     bemMarcado++;
-                    Console.WriteLine(resp);
                 }
                 else if (D <= 155)
                 {
@@ -70,16 +66,19 @@ namespace ConsoleApplication1
                 {
                     resp = "E";
                     bemMarcado++;
-                    Console.WriteLine(resp);
                 }
                 else if (E <= 155)
                 {
                     ambiguo++;
                 }
 
-                else if (bemMarcado != 1 && ambiguo != 0)
+                if (bemMarcado != 1 && ambiguo != 0)
                 {
                     Console.WriteLine("*");
+                }
+                else if(bemMarcado == 1 && ambiguo == 0)
+                {
+                    Console.WriteLine(resp);
                 }
             }
         }
