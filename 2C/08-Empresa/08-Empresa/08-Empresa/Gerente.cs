@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace _08_Empresa
 {
-    class Gerente
+    class Gerente: Funcionario
     {
-        public string Setor { get; set; }
-
+        public Gerente(int r, int s) : base(r)
+        {
+            Setor = r;
+        }
+        public int Setor { get; set; }
         public string Bonus { get; set; }
     }
 }

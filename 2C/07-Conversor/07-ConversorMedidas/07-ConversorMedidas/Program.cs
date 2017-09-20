@@ -10,10 +10,6 @@ namespace _07_ConversorMedidas
     {
         static void Main(string[] args)
         {
-            int x;
-            //Console.WriteLine("1-Inserir Algo \n2 Converter Peso \n3-Converter Temperatura \n4-Converter Distancia");
-            //x = int.Parse(Console.ReadLine());
-
         }
     }
 }

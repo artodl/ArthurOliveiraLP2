@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace _08_Empresa
 {
-    class Empregado: Funcionario
+    class Empregado : Funcionario
     {
-        public string Gerente { get; set; }
-        public string Entrada { get; set; }
-
-        public Empregado() { }
-
-        public Empregado (int r, string n, double sal, string set)
+        public Empregado(int n, string d) : base(n)
         {
-            NroRegist = r;
-            Nome = n;
-            Salario = sal;
-            Gerente = set;
+            dataEntrada = d;
         }
+
+        private string dataEntrada;
+        public string DataEntrada
+        {
+            get { return dataEntrada; }
+        }
+        public Gerente Gerente { get; set; }
     }
+
 }

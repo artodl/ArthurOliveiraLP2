@@ -10,7 +10,7 @@ namespace _08_Empresa
     {
         static void Main(string[] args)
         {
-
+            Gerente g = new Gerente(15689425, 20);
         }
     }
 }

@@ -14,13 +14,21 @@ namespace _08_Empresa
 
         public string Email { get; set; }
 
-        public int NroRegist { get; set; }
+        private int nroRegist;
+        public int NroRegist
+        {
+            get { return nroRegist; }
+        }
 
-        public double Salario { get; set; }
+        private double salario;
+        public double Salario
+        {
+            get { return salario; }
+        }
 
         public Funcionario(int reg)
         {
-            this.NroRegist = reg;
+            this.nroRegist = reg;
         }
 
     }
