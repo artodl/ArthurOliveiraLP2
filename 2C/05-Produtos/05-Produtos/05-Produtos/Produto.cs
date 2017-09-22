@@ -21,7 +21,7 @@ namespace _05_Produtos
         }
 
         private int quantidade;
-        public int Qquantidade
+        public int Quantidade
         {
             get { return quantidade; }
         }
